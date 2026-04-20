@@ -1,6 +1,12 @@
 # Glasses 3D Player - 3DoF Video Player for VITURE & RayNeo
 
+[![Get it on Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.neeraj.vitureplayer)
+
 Glasses 3D Player is a high-performance Android video player designed specifically for XR (Extended Reality) glasses. It features advanced 3DoF (3 Degrees of Freedom) head tracking, spatial stabilization, and support for ultra-high-resolution VR180/SBS content.
+
+## 📥 Download
+You can download the latest stable version directly from the [Google Play Store](https://play.google.com/store/apps/details?id=com.neeraj.vitureplayer).
+
 
 ## 🚀 Features
 
