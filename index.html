@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glasses 3d Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-panel border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <i class="fa-solid fa-vr-cardboard text-blue-500 text-2xl mr-2"></i>
+                    <span class="font-bold text-xl tracking-tight">Glasses 3d Player</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#features" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Features</a>
+                        <a href="#controls" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Controls</a>
+                        <a href="#themes" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Themes</a>
+                    </div>
+                </div>
+                <div>
+                    <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-bold transition shadow-lg shadow-blue-500/30">
+                        Get on Google Play
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+            Your Ultimate XR Media Hub
+        </h1>
+        <p class="mt-4 max-w-2xl text-xl text-gray-400 mx-auto mb-10">
+            Designed exclusively for AR/XR glasses like Viture and RayNeo. Seamlessly switch between Flat, 3D, and VR180 content with native head tracking and spatial computing support.
+        </p>
+        <div class="relative max-w-4xl mx-auto mt-12 rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/20 border border-gray-800">
+            <img src="27369.jpeg" alt="Glasses 3d Player Interface" class="w-full h-auto">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- Controls Breakdown Section -->
+    <section id="controls" class="py-20 bg-gray-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Master Your Media</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Intuitive, gaze-friendly controls built for spatial environments. Here is what every button does.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Top Bar Utilities -->
+                <div class="glass-panel p-6 rounded-xl">
+                    <h3 class="text-xl font-bold text-blue-400 mb-4 border-b border-gray-800 pb-2">Media & Settings</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start"><span class="bg-gray-800 p-2 rounded mr-3 text-sm"><i class="fa-solid fa-plus w-4 text-center"></i></span> <strong>Add Media:</strong> Browse local files and folders.</li>
+                        <li class="flex items-start"><span class="bg-gray-800 p-2 rounded mr-3 text-sm"><i class="fa-solid fa-link w-4 text-center"></i></span> <strong>Network Stream:</strong> Open direct URL video links.</li>
+                        <li class="flex items-start"><span class="bg-gray-800 p-2 rounded mr-3 text-sm"><i class="fa-solid fa-gear w-4 text-center"></i></span> <strong>Settings:</strong> Configure head tracking, codecs, and UI.</li>
+                        <li class="flex items-start"><span class="bg-gray-800 p-2 rounded mr-3 text-sm"><i class="fa-solid fa-medal w-4 text-center"></i></span> <strong>Premium:</strong> Access Pro features and monetization options.</li>
+                    </ul>
+                </div>
+
+                <!-- Playback Modes -->
+                <div class="glass-panel p-6 rounded-xl border-blue-500/30">
+                    <h3 class="text-xl font-bold text-purple-400 mb-4 border-b border-gray-800 pb-2">Display Modes</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start"><span class="bg-gray-800 px-3 py-1 rounded mr-3 text-xs font-bold mt-1">Flat</span> <strong>2D Mode:</strong> Standard cinema screen viewing.</li>
+                        <li class="flex items-start"><span class="bg-gray-800 px-3 py-1 rounded mr-3 text-xs font-bold mt-1">3D</span> <strong>3D SBS:</strong> Side-by-side 3D stereoscopic playback.</li>
+                        <li class="flex items-start"><span class="bg-gray-800 px-3 py-1 rounded mr-3 text-xs font-bold mt-1">VR180</span> <strong>Immersive VR:</strong> 180-degree spherical video projection.</li>
+                        <li class="flex items-start mt-4 pt-4 border-t border-gray-800"><span class="bg-gray-800 p-2 rounded mr-3 text-sm"><i class="fa-solid fa-expand w-4 text-center"></i></span> <strong>Spatial Tools:</strong> Adjust aspect ratio, PiP, screen lock, and left/right eye swap.</li>
+                    </ul>
+                </div>
+
+                <!-- Playback & Audio -->
+                <div class="glass-panel p-6 rounded-xl">
+                    <h3 class="text-xl font-bold text-emerald-400 mb-4 border-b border-gray-800 pb-2">Playback & Tracks</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start"><span class="bg-blue-600 p-2 rounded-full mr-3 text-sm"><i class="fa-solid fa-play w-4 text-white text-center"></i></span> <strong>Play/Pause:</strong> Central control for media playback.</li>
+                        <li class="flex items-start"><span class="bg-gray-800 p-2 rounded-full mr-3 text-sm"><i class="fa-solid fa-rotate-left w-4 text-center"></i></span> <strong>Skip 10s:</strong> Quickly rewind or fast-forward.</li>
+                        <li class="flex items-start"><span class="bg-gray-800 p-2 rounded mr-3 text-sm"><i class="fa-solid fa-music w-4 text-center"></i></span> <strong>Audio Tracks:</strong> Switch between multiple audio streams (AC3 supported).</li>
+                        <li class="flex items-start"><span class="bg-gray-800 p-2 rounded mr-3 text-sm"><i class="fa-solid fa-closed-captioning w-4 text-center"></i></span> <strong>Subtitles:</strong> Select or load custom subtitle files.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Themes Section -->
+    <section id="themes" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">Personalize Your Player</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Match your style with 6 custom-crafted UI themes. From bright and minimal to dark and immersive.</p>
+            </div>
+            
+            <div class="flex justify-center">
+                <img src="27367.jpg" alt="6 Custom Themes" class="max-w-full h-auto rounded-xl shadow-2xl shadow-purple-900/20 border border-gray-800">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 bg-gray-950 py-10 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <i class="fa-solid fa-vr-cardboard text-gray-500 text-3xl mb-4 block"></i>
+            <h3 class="text-xl font-bold text-white mb-6">Glasses 3d Player</h3>
+            <p class="text-gray-500 mb-6">Built for the future of spatial computing and AR glasses.</p>
+            <p class="text-gray-600 text-sm">
+                &copy; 2026 Neeraj Verma. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
