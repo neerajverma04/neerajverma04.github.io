@@ -3,97 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glasses 3D Player</title>
+    <title>Glasses 3D Player | Ultimate XR Media Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+        }
+
         .glass-panel {
-            background: rgba(17, 24, 39, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+
+        .nav-link:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #3b82f6;
+            transition: width .3s;
+        }
+        .nav-link:hover:after {
+            width: 100%;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="text-gray-100 antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-panel border-b border-gray-800">
+    <nav class="fixed w-full z-50 glass-panel border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <i class="fa-solid fa-vr-cardboard text-blue-500 text-2xl mr-2"></i>
-                    <span class="font-bold text-xl tracking-tight">Glasses 3D Player</span>
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center group cursor-pointer">
+                    <div class="bg-blue-600 p-2 rounded-lg mr-3 shadow-lg shadow-blue-600/20 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-glasses text-white text-xl"></i>
+                    </div>
+                    <span class="font-bold text-2xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">Glasses 3D Player</span>
                 </div>
                 <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#features" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Features</a>
-                        <a href="#controls" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Controls</a>
-                        <a href="#themes" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Themes</a>
+                    <div class="ml-10 flex items-baseline space-x-10">
+                        <a href="#features" class="nav-link text-gray-300 hover:text-white px-1 py-2 text-sm font-semibold transition-colors">Features</a>
+                        <a href="#controls" class="nav-link text-gray-300 hover:text-white px-1 py-2 text-sm font-semibold transition-colors">Controls</a>
+                        <a href="#themes" class="nav-link text-gray-300 hover:text-white px-1 py-2 text-sm font-semibold transition-colors">Themes</a>
                     </div>
                 </div>
                 <div>
-                    <!-- Updated Google Play Link -->
-                    <a href="https://play.google.com/store/apps/details?id=com.neeraj.vitureplayer" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-bold transition shadow-lg shadow-blue-500/30">
-                        Get on Google Play
+                    <a href="https://play.google.com/store/apps/details?id=com.neeraj.vitureplayer" target="_blank" class="bg-white hover:bg-gray-200 text-black px-6 py-2.5 rounded-full text-sm font-bold transition-all hover:scale-105 shadow-xl shadow-white/10 active:scale-95">
+                        Download Now
                     </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Features / Hero Section -->
-    <section id="features" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
-        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-            Your Ultimate XR Media Hub
-        </h1>
-        <p class="mt-4 max-w-2xl text-xl text-gray-400 mx-auto mb-10">
-            Designed exclusively for AR/XR glasses like Viture and RayNeo. Seamlessly switch between Flat, 3D, and VR180 content with native head tracking and spatial computing support.
-        </p>
-        <div class="relative max-w-4xl mx-auto mt-12 rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/20 border border-gray-800">
-            <img src="27369.jpeg" alt="Glasses 3D Player Interface" class="w-full h-auto">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+    <!-- Hero Section -->
+    <section id="features" class="relative pt-48 pb-24 hero-gradient overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-blue-400 uppercase bg-blue-400/10 rounded-full border border-blue-400/20">
+                
+            </span>
+            <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-none bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-gray-500">
+                Spatial Cinema <br>On Your Face.
+            </h1>
+            <p class="max-w-2xl text-xl text-gray-400 mx-auto mb-12 leading-relaxed">
+                The most advanced media player for AR/XR glasses. Engineered for <strong>VITURE and RayNeo</strong> with native 3DoF head tracking and spatial audio support.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-20">
+                <div class="flex items-center px-4 py-2 glass-panel rounded-full text-sm text-gray-300 border-white/5">
+                    <i class="fa-solid fa-check-circle text-blue-500 mr-2"></i> 8K VR180 Support
+                </div>
+                <div class="flex items-center px-4 py-2 glass-panel rounded-full text-sm text-gray-300 border-white/5">
+                    <i class="fa-solid fa-check-circle text-blue-500 mr-2"></i> SBS & OU 3D
+                </div>
+                <div class="flex items-center px-4 py-2 glass-panel rounded-full text-sm text-gray-300 border-white/5">
+                    <i class="fa-solid fa-check-circle text-blue-500 mr-2"></i> Head Tracking
+                </div>
+            </div>
+
+            <div class="relative max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-[0_0_100px_-20px_rgba(59,130,246,0.3)] border border-white/10 group">
+                <img src="27369.jpeg" alt="Player Interface" class="w-full h-auto transform group-hover:scale-[1.02] transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent"></div>
+            </div>
         </div>
     </section>
 
-    <!-- Controls Breakdown Section -->
-    <section id="controls" class="py-20 bg-gray-950">
+    <!-- Controls Breakdown -->
+    <section id="controls" class="py-32 bg-[#080808]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-white mb-4">Master Your Media</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">Intuitive, gaze-friendly controls built for spatial environments. Here is what every button does.</p>
+            <div class="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
+                <div class="max-w-2xl">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">Precision Controls <br><span class="text-blue-500">Built for AR.</span></h2>
+                    <p class="text-gray-400 text-lg">Every button is optimized for gaze and remote interaction. No more fumbling with standard touch controls in a spatial world.</p>
+                </div>
+                <div class="flex gap-4">
+                    <div class="p-4 glass-panel rounded-2xl text-center min-w-[120px]">
+                        <div class="text-2xl font-bold text-white">6DoF</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-widest mt-1">Tracking</div>
+                    </div>
+                    <div class="p-4 glass-panel rounded-2xl text-center min-w-[120px]">
+                        <div class="text-2xl font-bold text-white">1.12</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-widest mt-1">Version</div>
+                    </div>
+                </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Top Bar Utilities -->
-                <div class="glass-panel p-6 rounded-xl">
-                    <h3 class="text-xl font-bold text-blue-400 mb-4 border-b border-gray-800 pb-2">Media & Settings</h3>
-                    <ul class="space-y-4 text-gray-300">
-                        <li class="flex items-start"><span class="bg-gray-800 p-2 rounded mr-3 text-sm"><i class="fa-solid fa-plus w-4 text-center"></i></span> <strong>Add Media:</strong> Browse local files and folders.</li>
-                        <li class="flex items-start"><span class="bg-gray-800 p-2 rounded mr-3 text-sm"><i class="fa-solid fa-link w-4 text-center"></i></span> <strong>Network Stream:</strong> Open direct URL video links.</li>
-                        <li class="flex items-start"><span class="bg-gray-800 p-2 rounded mr-3 text-sm"><i class="fa-solid fa-gear w-4 text-center"></i></span> <strong>Settings:</strong> Configure head tracking, codecs, and UI.</li>
-                        <li class="flex items-start"><span class="bg-gray-800 p-2 rounded mr-3 text-sm"><i class="fa-solid fa-medal w-4 text-center"></i></span> <strong>Premium:</strong> Access Pro features and monetization options.</li>
+                <!-- Media Hub -->
+                <div class="glass-panel p-8 rounded-3xl feature-card">
+                    <div class="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 border border-blue-500/20">
+                        <i class="fa-solid fa-folder-open text-blue-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Media Hub</h3>
+                    <ul class="space-y-5 text-gray-400">
+                        <li class="flex items-center"><i class="fa-solid fa-plus text-xs mr-4 text-blue-500"></i> <strong>Local Files:</strong> Smart file browser for your library.</li>
+                        <li class="flex items-center"><i class="fa-solid fa-link text-xs mr-4 text-blue-500"></i> <strong>Stream URL:</strong> Direct 8K streaming support.</li>
+                        <li class="flex items-center"><i class="fa-solid fa-gear text-xs mr-4 text-blue-500"></i> <strong>Pro Codecs:</strong> Custom FFmpeg decoder support.</li>
+                        <li class="flex items-center"><i class="fa-solid fa-crown text-xs mr-4 text-blue-500"></i> <strong>Premium:</strong> Ad-free immersive experience.</li>
                     </ul>
                 </div>
 
-                <!-- Playback Modes -->
-                <div class="glass-panel p-6 rounded-xl border-blue-500/30">
-                    <h3 class="text-xl font-bold text-purple-400 mb-4 border-b border-gray-800 pb-2">Display Modes</h3>
-                    <ul class="space-y-4 text-gray-300">
-                        <li class="flex items-start"><span class="bg-gray-800 px-3 py-1 rounded mr-3 text-xs font-bold mt-1">Flat</span> <strong>2D Mode:</strong> Standard cinema screen viewing.</li>
-                        <li class="flex items-start"><span class="bg-gray-800 px-3 py-1 rounded mr-3 text-xs font-bold mt-1">3D</span> <strong>3D SBS:</strong> Side-by-side 3D stereoscopic playback.</li>
-                        <li class="flex items-start"><span class="bg-gray-800 px-3 py-1 rounded mr-3 text-xs font-bold mt-1">VR180</span> <strong>Immersive VR:</strong> 180-degree spherical video projection.</li>
-                        <li class="flex items-start mt-4 pt-4 border-t border-gray-800"><span class="bg-gray-800 p-2 rounded mr-3 text-sm"><i class="fa-solid fa-expand w-4 text-center"></i></span> <strong>Spatial Tools:</strong> Adjust aspect ratio, PiP, screen lock, and left/right eye swap.</li>
+                <!-- Display Modes -->
+                <div class="glass-panel p-8 rounded-3xl feature-card border-blue-500/30 shadow-lg shadow-blue-500/5">
+                    <div class="w-12 h-12 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 border border-purple-500/20">
+                        <i class="fa-solid fa-layer-group text-purple-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Spatial Modes</h3>
+                    <ul class="space-y-5 text-gray-400">
+                        <li class="flex items-center"><i class="fa-solid fa-circle text-[6px] mr-4 text-purple-500"></i> <strong>Flat Mode:</strong> Traditional virtual cinema.</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle text-[6px] mr-4 text-purple-500"></i> <strong>3D Toggle:</strong> Smart SBS/OU consolidated switch.</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle text-[6px] mr-4 text-purple-500"></i> <strong>VR180:</strong> Spherical projection with FOV stretch.</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle text-[6px] mr-4 text-purple-500"></i> <strong>Mirror Mode:</strong> 2D mirroring for hardware 3D.</li>
                     </ul>
                 </div>
 
-                <!-- Playback & Audio -->
-                <div class="glass-panel p-6 rounded-xl">
-                    <h3 class="text-xl font-bold text-emerald-400 mb-4 border-b border-gray-800 pb-2">Playback & Tracks</h3>
-                    <ul class="space-y-4 text-gray-300">
-                        <li class="flex items-start"><span class="bg-blue-600 p-2 rounded-full mr-3 text-sm"><i class="fa-solid fa-play w-4 text-white text-center"></i></span> <strong>Play/Pause:</strong> Central control for media playback.</li>
-                        <li class="flex items-start"><span class="bg-gray-800 p-2 rounded-full mr-3 text-sm"><i class="fa-solid fa-rotate-left w-4 text-center"></i></span> <strong>Skip 10s:</strong> Quickly rewind or fast-forward.</li>
-                        <li class="flex items-start"><span class="bg-gray-800 p-2 rounded mr-3 text-sm"><i class="fa-solid fa-music w-4 text-center"></i></span> <strong>Audio Tracks:</strong> Switch between multiple audio streams (AC3 supported).</li>
-                        <li class="flex items-start"><span class="bg-gray-800 p-2 rounded mr-3 text-sm"><i class="fa-solid fa-closed-captioning w-4 text-center"></i></span> <strong>Subtitles:</strong> Select or load custom subtitle files.</li>
+                <!-- Immersion Tools -->
+                <div class="glass-panel p-8 rounded-3xl feature-card">
+                    <div class="w-12 h-12 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 border border-emerald-500/20">
+                        <i class="fa-solid fa-sliders text-emerald-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Immersion</h3>
+                    <ul class="space-y-5 text-gray-400">
+                        <li class="flex items-center"><i class="fa-solid fa-arrows-to-circle text-xs mr-4 text-emerald-500"></i> <strong>Recenter:</strong> One-tap 6DoF orientation reset.</li>
+                        <li class="flex items-center"><i class="fa-solid fa-expand text-xs mr-4 text-emerald-500"></i> <strong>Aspect Ratio:</strong> Auto-detecting Fit, Fill, Zoom.</li>
+                        <li class="flex items-center"><i class="fa-solid fa-tv text-xs mr-4 text-emerald-500"></i> <strong>Glasses Only:</strong> Phone screen off to save battery.</li>
+                        <li class="flex items-center"><i class="fa-solid fa-language text-xs mr-4 text-emerald-500"></i> <strong>Multi-Track:</strong> Toggle Audio/Subtitles on the fly.</li>
                     </ul>
                 </div>
             </div>
@@ -101,28 +171,40 @@
     </section>
 
     <!-- Themes Section -->
-    <section id="themes" class="py-20 bg-gray-900">
+    <section id="themes" class="py-32 bg-[#050505]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-white mb-4">Personalize Your Player</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">Match your style with 6 custom-crafted UI themes. From bright and minimal to dark and immersive.</p>
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-black mb-6">Designed for <span class="text-purple-500">Comfort.</span></h2>
+                <p class="text-gray-400 text-xl max-w-2xl mx-auto">Switch between 6 premium themes including Midnight, Sharp, and OLED Black. Your eyes, your rules.</p>
             </div>
-            
-            <div class="flex justify-center">
-                <img src="27367.jpg" alt="6 Custom Themes" class="max-w-full h-auto rounded-xl shadow-2xl shadow-purple-900/20 border border-gray-800">
+
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <img src="27367.jpg" alt="Themes" class="relative max-w-full h-auto rounded-3xl border border-white/10 shadow-2xl shadow-purple-900/10">
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-gray-800 bg-gray-950 py-10 text-center">
+    <footer class="border-t border-white/5 bg-[#050505] py-24 text-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <i class="fa-solid fa-vr-cardboard text-gray-500 text-3xl mb-4 block"></i>
-            <h3 class="text-xl font-bold text-white mb-6">Glasses 3D Player</h3>
-            <p class="text-gray-500 mb-6">Built for the future of spatial computing and AR glasses.</p>
-            <p class="text-gray-600 text-sm">
+            <div class="flex justify-center mb-10">
+                <div class="bg-blue-600/10 p-4 rounded-2xl border border-blue-600/20">
+                    <i class="fa-solid fa-glasses text-blue-500 text-4xl"></i>
+                </div>
+            </div>
+            <h3 class="text-3xl font-bold text-white mb-4">Glasses 3D Player</h3>
+            <p class="text-gray-500 max-w-lg mx-auto mb-12">The world's first high-performance open media player for the next generation of spatial computing.</p>
+
+            <div class="flex justify-center space-x-6 mb-12 text-gray-400">
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-github text-2xl"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-twitter text-2xl"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-discord text-2xl"></i></a>
+            </div>
+
+            <div class="text-gray-600 text-sm font-medium">
                 &copy; 2026 Neeraj Verma. All rights reserved.
-            </p>
+            </div>
         </div>
     </footer>
 
